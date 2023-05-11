@@ -8,7 +8,7 @@ Things to do after taking clone :
 
 3.Run npm run dev in your terminal.
 
-4.Please create an .env file.
+4.Please copy paste .env.example and name it as .env file.
 
 5.Create database in your local mysql.
 

@@ -40,11 +40,11 @@
                 @foreach($data['items'] as $value)
                 <tr>
                     <td>{{$value['id']}}</td>
-                    <td>{{$value['first_name']}}</td>
-                    <td>{{$value['last_name']}}</td>
+                    <td>{{ucwords($value['first_name'])}}</td>
+                    <td>{{ucwords($value['last_name'])}}</td>
                     <td>{{ \Carbon\Carbon::parse($value['birthday'])->format('Y-m-d') }}</td>
-                    <td>{{$value['gender']}}</td>
-                    <td>{{$value['place_of_birth']}}</td>
+                    <td>{{ucwords($value['gender'])}}</td>
+                    <td>{{ucwords($value['place_of_birth'])}}</td>
                     <td>
                       <div class="dropdown">
                           <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
