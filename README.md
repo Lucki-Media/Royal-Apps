@@ -24,4 +24,6 @@ ADMIN_ROLE="Administrator"
 
 10.Turn on xampp server.
 
-11.Run 'php artisan serve'.
+11.Run 'php artisan key:generate'.
+
+12.Run 'php artisan serve'.
