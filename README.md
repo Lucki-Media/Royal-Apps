@@ -2,11 +2,11 @@
 
 Things to do after taking clone :
 
-1.Run composer install in your terminal.
+1.Run 'composer install' in your terminal.
 
-2.Run npm install in your terminal.
+2.Run 'npm install' in your terminal.
 
-3.Run npm run dev in your terminal.
+3.Run 'npm run dev' in your terminal.
 
 4.Please copy paste .env.example and name it as .env file.
 
@@ -18,8 +18,10 @@ Things to do after taking clone :
 ADMIN_NAME="Royal Apps"
 ADMIN_ROLE="Administrator"
 
-8.Run php artisan migrate.
+8.Run 'php artisan migrate'.
 
-9.Run php artisan db:seed --class=DatabaseSeeder.
+9.Run 'php artisan db:seed --class=DatabaseSeeder'.
 
-10.Run php artisan serve.
+10.Turn on xampp server.
+
+11.Run 'php artisan serve'.
