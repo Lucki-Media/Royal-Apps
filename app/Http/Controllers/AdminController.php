@@ -39,7 +39,7 @@ class AdminController extends Controller
           DB::table('users')->update(['token_key'=>$retrieveToken['token_key'],'refresh_token_key'=>$retrieveToken['refresh_token_key']]);
           // echo '<pre>';print_r($retrieveToken);exit;
           //Authentication passed...
-            return redirect('gfadmin/authors');
+            return redirect('gfadmin/dashboard');
         } else {
             return redirect()->route('login')->withErrors(['error' => 'Oppes! You have entered invalid credentials']);
         }

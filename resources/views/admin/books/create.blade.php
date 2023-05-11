@@ -32,7 +32,7 @@
                       <select name="author_id" class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
                         <option value="" selected>Please select author</option>
                         @foreach($data['items'] as $value)
-                          <option  value="{{ $value['id'] }}">{{ $value['first_name'] . ' ' . $value['first_name'] }}</option>
+                          <option  value="{{ $value['id'] }}">{{ $value['first_name'] . ' ' . $value['last_name'] }}</option>
                         @endforeach
                       </select>
                     </div>
