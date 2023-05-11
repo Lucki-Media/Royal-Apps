@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->longText('token_key');
-          $table->longText('refresh_token_key');
+          $table->longText('token_key')->nullable();
+          $table->longText('refresh_token_key')->nullable();
         });
     }
 
