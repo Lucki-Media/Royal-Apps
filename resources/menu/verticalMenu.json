@@ -1,0 +1,22 @@
+{
+  "menu": [
+    {
+      "url": "/gfadmin/dashboard",
+      "name": "Profile",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard"
+    },
+    {
+      "url": "/gfadmin/authors",
+      "name": "Authors",
+      "icon": "menu-icon tf-icons bx bx-user-circle",
+      "slug": "authors"
+    },
+    {
+      "url": "/gfadmin/books",
+      "name": "Books",
+      "icon": "menu-icon tf-icons bx bxs-book",
+      "slug": "dashboard-analytics"
+    }
+  ]
+}
