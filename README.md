@@ -22,7 +22,7 @@ ADMIN_ROLE="Administrator"
 
 9.Run 'php artisan db:seed --class=DatabaseSeeder'.
 
-10.Turn on xampp server.
+10.Turn on xampp server -> (Apache & MySql).
 
 11.Run 'php artisan key:generate'.
 
