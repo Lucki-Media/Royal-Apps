@@ -14,7 +14,7 @@ Things to do after taking clone :
 
 6.Add the database name in your .env after "DB_DATABASE".
 
-7.Add API_URL='https://candidate-testing.api.royal-apps.io/api/v2'
+7.Add API_URL='https://candidate-testing.api.royal-apps.io/api/v2' in your ".env" file.
 
 8.Add the following lines in your .env file:
 ADMIN_NAME="Royal Apps"
