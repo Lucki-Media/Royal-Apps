@@ -14,16 +14,18 @@ Things to do after taking clone :
 
 6.Add the database name in your .env after "DB_DATABASE".
 
-7.Add the following lines in your .env file:
+7.Add API_URL='https://candidate-testing.api.royal-apps.io/api/v2'
+
+8.Add the following lines in your .env file:
 ADMIN_NAME="Royal Apps"
 ADMIN_ROLE="Administrator"
 
-8.Run 'php artisan migrate'.
+9.Run 'php artisan migrate'.
 
-9.Run 'php artisan db:seed --class=DatabaseSeeder'.
+10.Run 'php artisan db:seed --class=DatabaseSeeder'.
 
-10.Turn on xampp server -> (Apache & MySql).
+11.Turn on xampp server -> (Apache & MySql).
 
-11.Run 'php artisan key:generate'.
+12.Run 'php artisan key:generate'.
 
-12.Run 'php artisan serve'.
+13.Run 'php artisan serve'.

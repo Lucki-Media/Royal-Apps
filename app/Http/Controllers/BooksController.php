@@ -11,7 +11,7 @@ class BooksController extends Controller
 {
   public function index(){
     $token_data = User::first();
-    $url = "https://symfony-skeleton.q-tests.com/api/v2/books?orderBy=id&direction=ASC&limit=100";
+    $url = env('API_URL')."/books?orderBy=id&direction=ASC&limit=100";
 
     $data = self::getCurlWithToken($url,$token_data['token_key']);
           // echo '<pre>';print_r($data);exit;
@@ -21,14 +21,14 @@ class BooksController extends Controller
 
   public function create(){
     $token_data = User::first();
-    $url = "https://symfony-skeleton.q-tests.com/api/v2/authors?orderBy=id&direction=DESC&limit=100";
+    $url = env('API_URL')."/authors?orderBy=id&direction=DESC&limit=100";
     $data = self::getCurlWithToken($url,$token_data['token_key']);
     return view('admin.books.create')->with('data', $data);
   }
 
   public function addBook(Request $request){
     $token_data = User::first();
-    $url = "https://symfony-skeleton.q-tests.com/api/v2/books";
+    $url = env('API_URL')."/books";
     $request->validate([
       'author_id'         => 'required',
       'title'             => 'required',
@@ -64,7 +64,7 @@ class BooksController extends Controller
 
   public function destroy($authorId,$bookId){
     $token_data = User::first();
-    $books_url = "https://symfony-skeleton.q-tests.com/api/v2/books/".$bookId;
+    $books_url = env('API_URL')."/books/".$bookId;
 
     $book_delete = self::deleteCurlWithToken($books_url,$token_data['token_key']);
     return redirect(url('gfadmin/authors/view-author/'.$authorId))->with('success',"Book deleted successfully!");

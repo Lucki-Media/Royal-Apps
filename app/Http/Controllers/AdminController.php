@@ -33,7 +33,7 @@ class AdminController extends Controller
               'password' => $request->password,
           ];
           $data_string = json_encode($data);
-          $url = "https://symfony-skeleton.q-tests.com/api/v2/token";
+          $url = env('API_URL')."/token";
 
           $retrieveToken = self::postCurl($data_string,$url);
           DB::table('users')->update(['token_key'=>$retrieveToken['token_key'],'refresh_token_key'=>$retrieveToken['refresh_token_key']]);

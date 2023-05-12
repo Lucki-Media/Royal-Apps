@@ -11,14 +11,14 @@ class AuthorsController extends Controller
 {
   public function index(){
     $token_data = User::first();
-    $url = "https://symfony-skeleton.q-tests.com/api/v2/authors?orderBy=id&direction=DESC&limit=100";
+    $url = env('API_URL')."/authors?orderBy=id&direction=DESC&limit=100";
     $data = self::getCurlWithToken($url,$token_data['token_key']);
     return view('admin.authors.index')->with('data', $data);
   }
 
   public function viewAuthor($authorId){
     $token_data = User::first();
-    $authors_url = "https://symfony-skeleton.q-tests.com/api/v2/authors/".$authorId;
+    $authors_url = env('API_URL')."/authors/".$authorId;
     $data = self::getCurlWithToken($authors_url,$token_data['token_key']);
     $final_data = [];
     $final_data = [
@@ -39,7 +39,7 @@ class AuthorsController extends Controller
 
   public function addAuthor(Request $request){
     $token_data = User::first();
-    $url = "https://symfony-skeleton.q-tests.com/api/v2/authors";
+    $url = env('API_URL')."/authors";
     $request->validate([
       'first_name'      => 'required',
       'last_name'       => 'required',
@@ -69,7 +69,7 @@ class AuthorsController extends Controller
 
   public function destroy($authorId){
     $token_data = User::first();
-    $authors_url = "https://symfony-skeleton.q-tests.com/api/v2/authors/".$authorId;
+    $authors_url = env('API_URL')."/authors/".$authorId;
 
     $authors_data = self::getCurlWithToken($authors_url,$token_data['token_key']);
     // echo '<pre>';print_r($authors_data);exit;
